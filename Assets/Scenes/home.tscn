@@ -5779,6 +5779,16 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_cfd3s")
 sources/0 = SubResource("TileSetAtlasSource_l6bnv")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lfoym"]
+texture = ExtResource("2_gf4ng")
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gf4ng"]
+sources/0 = SubResource("TileSetAtlasSource_lfoym")
+
 [node name="Home" type="Node2D" unique_id=66728227]
 
 [node name="TileMap" type="TileMap" parent="." unique_id=371811722]
@@ -5786,5 +5796,8 @@ tile_set = SubResource("TileSet_43pc1")
 format = 2
 layer_0/tile_data = PackedInt32Array(262134, 917504, 13, 262135, 917504, 13, 262136, 917504, 13, 262137, 917504, 13, 262138, 917504, 13, 262139, 917504, 13, 262140, 917504, 13, 262141, 917504, 13, 262142, 917504, 13, 262143, 917504, 13, 196608, 917504, 13, 196609, 917504, 13, 196610, 917504, 13, 196611, 917504, 13, 196612, 917504, 13, 196613, 917504, 13, 196614, 917504, 13, 196615, 917504, 13, 196616, 917504, 13, 196617, 917504, 13, 196618, 917504, 13, 196619, 917504, 13, 262133, 917504, 13, 262132, 917504, 13, 65541, 917504, 13, 65542, 917504, 13, 9, 917504, 13, 10, 917504, 13, 196596, 917504, 13, 131060, 917504, 13, 131059, 917504, 13, 65523, 917504, 13, -13, 917504, 13, -65549, 917504, 13, -131085, 917504, 13, -196621, 917504, 13, -262157, 917504, 13, -327693, 917504, 13, 196620, 917504, 13, 131084, 917504, 13, 131085, 917504, 13, 65549, 917504, 13, 65550, 917504, 13, 14, 917504, 13, -196594, 917504, 13, -262131, 917504, 13, -327667, 917504, 13, -393203, 917504, 13, -458739, 917504, 13, -524275, 917504, 13, 15, 917504, 13, 16, 917504, 13, 17, 917504, 13, 18, 917504, 13, -196593, 917504, 13, -196592, 917504, 13, -196591, 917504, 13, -196590, 917504, 13)
 
-[node name="DudePerson" parent="TileMap" unique_id=1680333095 instance=ExtResource("3_7prlg")]
+[node name="DudePerson" parent="." unique_id=1680333095 instance=ExtResource("3_7prlg")]
 position = Vector2(-56, 33)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=122903322]
+tile_set = SubResource("TileSet_gf4ng")
