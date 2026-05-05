@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bckpo17bo058n"]
 
 [ext_resource type="Texture2D" uid="uid://0qyxu0i7f5wy" path="res://Assets/Sprites/Main guy prototype.png" id="1_lfoym"]
-[ext_resource type="Texture2D" uid="uid://dtgc4bosrc15g" path="res://Assets/Sprites/Föld.png" id="2_gf4ng"]
 [ext_resource type="PackedScene" uid="uid://dg5w65ype4v3o" path="res://Assets/Player/dude_person.tscn" id="3_7prlg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l6bnv"]
@@ -5767,8 +5766,11 @@ texture = ExtResource("1_lfoym")
 71:39/0 = 0
 71:39/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_twiky"]
+load_path = "res://.godot/imported/Föld.png-51a7fa67854efd2e44e6b57f1afdba7a.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cfd3s"]
-texture = ExtResource("2_gf4ng")
+texture = SubResource("CompressedTexture2D_twiky")
 0:2/0 = 0
 1:2/0 = 0
 2:2/0 = 0
