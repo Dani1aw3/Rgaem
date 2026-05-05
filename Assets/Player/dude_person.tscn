@@ -1,26 +1,24 @@
 [gd_scene format=3 uid="uid://dg5w65ype4v3o"]
 
 [ext_resource type="Script" uid="uid://c3pwnx28e2m47" path="res://Assets/Scripts/DudePersonScript.gd" id="1_hfhp1"]
-[ext_resource type="Texture2D" uid="uid://0qyxu0i7f5wy" path="res://Assets/Sprites/Main guy prototype.png" id="1_vmkhu"]
+[ext_resource type="Texture2D" uid="uid://bqlelo48kpraf" path="res://Assets/Sprites/dudeperson.png" id="2_hfhp1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hfhp1"]
+radius = 13.0
+height = 62.0
 
 [node name="DudePerson" type="CharacterBody2D" unique_id=1680333095]
 script = ExtResource("1_hfhp1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=353447229]
-
-[node name="SteveAnimator" type="Node2D" parent="." unique_id=902293244]
-
-[node name="Sprite2D" type="Sprite2D" parent="SteveAnimator" unique_id=605338163]
-position = Vector2(-4.7683716e-07, 0)
-scale = Vector2(20.000002, 30)
-texture = ExtResource("1_vmkhu")
-region_enabled = true
-region_rect = Rect2(0, 0, 1, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SteveAnimator" unique_id=1089448052]
-root_node = NodePath("../../Camera2D")
+zoom = Vector2(1.4, 1.4)
+position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092843358]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_hfhp1")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=1946516434]
+
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D" unique_id=1536625664]
+texture = ExtResource("2_hfhp1")
