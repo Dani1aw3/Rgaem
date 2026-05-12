@@ -3,9 +3,8 @@
 [ext_resource type="Script" uid="uid://c3pwnx28e2m47" path="res://Assets/Scripts/DudePersonScript.gd" id="1_hfhp1"]
 [ext_resource type="Texture2D" uid="uid://bqlelo48kpraf" path="res://Assets/Sprites/dudeperson.png" id="2_hfhp1"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hfhp1"]
-radius = 13.0
-height = 62.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hfhp1"]
+size = Vector2(18, 59)
 
 [node name="DudePerson" type="CharacterBody2D" unique_id=1680333095]
 script = ExtResource("1_hfhp1")
@@ -14,9 +13,10 @@ script = ExtResource("1_hfhp1")
 zoom = Vector2(1.4, 1.4)
 position_smoothing_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2092843358]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_hfhp1")
+[node name="dude" type="CollisionShape2D" parent="." unique_id=2092843358]
+unique_name_in_owner = true
+position = Vector2(-2, 0.5)
+shape = SubResource("RectangleShape2D_hfhp1")
 
 [node name="Marker2D" type="Marker2D" parent="." unique_id=1946516434]
 

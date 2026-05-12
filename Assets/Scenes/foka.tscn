@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dkd0xajmij5y0"]
+
+[ext_resource type="Texture2D" uid="uid://bem0niuehtbek" path="res://Assets/Sprites/foka.png" id="1_nd4gh"]
+[ext_resource type="Script" uid="uid://bv1yg34ilea3e" path="res://character_body_2d.gd" id="1_tmlgh"]
+[ext_resource type="PackedScene" uid="uid://crl2umrqb3ewl" path="res://Assets/Scenes/killzone.tscn" id="3_3a4h7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3a4h7"]
+radius = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2xl5y"]
+radius = 36.0
+
+[node name="CharacterBody2D" type="RigidBody2D" unique_id=697945952]
+script = ExtResource("1_tmlgh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1316040737]
+texture = ExtResource("1_nd4gh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=324688309]
+position = Vector2(2, 3)
+shape = SubResource("CircleShape2D_3a4h7")
+
+[node name="killzone" parent="." unique_id=1163099614 instance=ExtResource("3_3a4h7")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=22409820]
+position = Vector2(-1, 3)
+shape = SubResource("CircleShape2D_2xl5y")

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dw1b4jytas150"]
+
+[ext_resource type="Texture2D" uid="uid://bwskhouss87c8" path="res://Assets/Sprites/tmp_df4dabc8-2d65-413e-9350-0cdb4c8da08f.png" id="1_6nm06"]
+
+[sub_resource type="GDScript" id="GDScript_6nm06"]
+script/source = "extends Node2D
+
+
+@onready var enemy = preload(\"res://Assets/Scenes/foka.tscn\")
+
+
+
+
+func _on_timer_timeout() -> void:
+	var ene = enemy.instantiate()
+	ene.position = position
+	get_parent().awadd_child(ene)
+"
+
+[node name="Node2D" type="Node2D" unique_id=2041462740]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=570997865]
+texture = ExtResource("1_6nm06")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1536781888]
+script = SubResource("GDScript_6nm06")
+
+[node name="Timer" type="Timer" parent="Node2D" unique_id=905319160]
+wait_time = 0.67
+autostart = true
+
+[connection signal="timeout" from="Node2D/Timer" to="Node2D" method="_on_timer_timeout"]
